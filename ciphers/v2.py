@@ -68,7 +68,6 @@ def encode(text):
 	s = len(encoded)
 
 	factors = factorize(s)
-	print(factors)
 
 	rows = factors[0]
 	cols = factors[1]
@@ -84,6 +83,8 @@ def encode(text):
 	# fill in the table
 	for coord in coords:
 		new[coord[0]][coord[1]] = encoded.pop()
+
+	print(new)
 
 	# compress it to one line and join it
 	new = ["".join(i) for i in new]
