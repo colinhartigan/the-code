@@ -88,8 +88,3 @@ def encode(text):
 		output.append("".join(built))
 	
 	return " ".join(output)
-
-
-# a = encode("Hello World!")
-
-# print(decode(a))
