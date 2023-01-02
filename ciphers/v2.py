@@ -1,4 +1,4 @@
-import base 
+import ciphers.base as base
 
 def factorize(s):
 	# find factors
@@ -68,6 +68,7 @@ def encode(text):
 	s = len(encoded)
 
 	factors = factorize(s)
+	print(factors)
 
 	rows = factors[0]
 	cols = factors[1]
@@ -88,17 +89,3 @@ def encode(text):
 	new = ["".join(i) for i in new]
 
 	return str("".join(new))
-			
-
-
-
-
-
-# e = encode("hello")
-# print(e)
-# print(decode(e))
-
-e = encode("upon further inspection, it looks like we can just straight up include punctuation and it works fine! it makes it even more unrecognizable because the punctuation locations get scrambled. my only woe is the fact that multiple spaces might appear next to eachother.")
-print(e)
-
-print(decode(e))
