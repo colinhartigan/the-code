@@ -30,7 +30,7 @@ def diagonalize(factors):
 		for j in range(0, count):
 			order.append((min(rows, diagonal_num) - j - 1, start_col + j))
 
-	return order 
+	return order
 
 
 def decode(text):
