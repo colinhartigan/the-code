@@ -3,6 +3,7 @@ import ciphers.base as base
 def factorize(s):
 	# find factors
 	factors = [i for i in range(1, s+1) if s % i == 0]
+	print(factors)
 
 	# get middle 2 factors
 	factors = factors[len(factors)//2-1:len(factors)//2+1]
@@ -66,6 +67,10 @@ def encode(text):
 	encoded = list(base.encode(text))[::-1]
 
 	s = len(encoded)
+
+	if s % 2 != 0:
+		encoded.append(" ")
+		s = len(encoded)
 
 	factors = factorize(s)
 
