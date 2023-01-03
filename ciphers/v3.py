@@ -4,8 +4,6 @@ def encode(text):
 	# encode in v2
 	encoded = v2.encode(text)
 
-	print(encoded + "\n")
-
 	# split the text into pairs of 2, v2's encoder guarantees that the length is even
 	split = [[encoded[i], encoded[i+1]] for i in range(0, len(encoded), 2)]
 
