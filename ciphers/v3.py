@@ -23,7 +23,7 @@ def encode(text):
 		sums.append(s)
 
 	# prepare the table for sorting numbers
-	table = {num: [] for num in set(sums)} 
+	table = {num: [] for num in sorted(set(sums))}
 
 	# organize the pairs into a table
 	for i, pair in enumerate(split):
@@ -94,9 +94,9 @@ def decode(text):
 				chain = []
 				reading = False
 
-	sums_ordered = list(set(sums))
+	sums_ordered = list(sorted(set(sums)))
 
-	table = {num: [] for num in set(sums)}
+	table = {num: [] for num in sums_ordered}
 
 	# reconstruct the frequency table
 	for i,v  in enumerate(freqs):

@@ -1,6 +1,7 @@
 from InquirerPy import inquirer
 import pyperclip
 
+import ciphers.base as base
 import ciphers.v2 as v2
 import ciphers.v3 as v3
 
@@ -16,6 +17,8 @@ def main():
 		if choice == "encode":
 			text = inquirer.text(message="text to encode").execute()
 			e = v3.encode(text)
+			#print(base.encode(text))
+			#print(v2.encode(text))
 			print(e)
 			pyperclip.copy(e)
 			
