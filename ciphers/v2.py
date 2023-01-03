@@ -3,7 +3,6 @@ import ciphers.base as base
 def factorize(s):
 	# find factors
 	factors = [i for i in range(1, s+1) if s % i == 0]
-	print(factors)
 
 	# get middle 2 factors
 	factors = factors[len(factors)//2-1:len(factors)//2+1]
@@ -88,8 +87,6 @@ def encode(text):
 	# fill in the table
 	for coord in coords:
 		new[coord[0]][coord[1]] = encoded.pop()
-
-	print(new)
 
 	# compress it to one line and join it
 	new = ["".join(i) for i in new]
